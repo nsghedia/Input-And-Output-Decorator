@@ -7,8 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'InputAndOutputDecorator';
+  oddNumer: number[] = [];
+  evenNumer: number[] = [];
 
   onintervalFired(event: number) {
-    console.log(event);
+    // console.log(event);
+    if (event % 2 != 0) this.oddNumer.push(event);
+    else this.evenNumer.push(event);
   }
 }
